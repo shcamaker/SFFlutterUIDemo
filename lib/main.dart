@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:css_colors/css_colors.dart';
+
 import './Views/firstPage.dart';
 import './Views/secondPage.dart';
 import './Views/thirdPage.dart';
