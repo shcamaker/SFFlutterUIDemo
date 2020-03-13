@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../components/myGrid.dart';
 
 class SecondPage extends StatefulWidget {
   @override
@@ -10,6 +11,6 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text('界面2')),body: Center(child: Text('second page')));
+            title: Text('界面2')),body: myGridView());
   }
 }
