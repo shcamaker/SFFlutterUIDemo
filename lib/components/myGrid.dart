@@ -8,13 +8,13 @@ class myGridView extends StatefulWidget {
 class _myGridViewState extends State<myGridView> {
   @override
   Widget build(BuildContext context) {
-    return Center(child: _buildGrid(),);
+    return Center(child: Text('dddd'),);
   }
 
   Widget _buildGrid() {
     return GridView.count(
       crossAxisCount: 2,
-      children: _buildGridList(7),
+      children: _buildGridList(1),
 
     );
   }
