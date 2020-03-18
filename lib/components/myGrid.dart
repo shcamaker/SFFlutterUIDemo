@@ -8,6 +8,15 @@ class myGridView extends StatefulWidget {
 class _myGridViewState extends State<myGridView> {
   @override
   Widget build(BuildContext context) {
+    Future.delayed(Duration(seconds: 2), () {
+        throw AssertionError('SFerror');
+    }).then((data){
+        print(data);
+    }).catchError((error){
+        print(error);
+    }).whenComplete((){
+        return  Center(child: Text('sssssdddd'),);
+    }); 
     return Center(child: Text('dddd'),);
   }
 
@@ -21,5 +30,9 @@ class _myGridViewState extends State<myGridView> {
 
   List<Widget> _buildGridList(int count) {
     return List<Widget>.generate(count, (int index) => Container(child: Image.asset('images/pic${index +1}.jpg'),));
+  }
+
+  task() async {
+    
   }
 }

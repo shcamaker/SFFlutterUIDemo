@@ -20,13 +20,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      initialRoute: '/home',
+      routes: {
+        'test_page': (context) => WillPopScopeTestRoute(),
+        '/home': (context) => MyHomePage()
+        },
       onGenerateRoute: (RouteSettings settings) {
-        return MaterialPageRoute(
-          builder: (context) {
-            return WillPopScopeTestRoute();
-          }
-        );
+        print('setttings');
+        
       },
     );
   }

@@ -10,6 +10,16 @@ class _ThirdPageState extends State<ThirdPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text('界面3')),body: Center(child: Text('third page')));
+            title: Text('界面3')),
+        body: Center(
+          child: FlatButton(
+            child: Text('open'),
+            textColor: Colors.blue,
+            onPressed: () {
+              Navigator.of(context).pushNamed('test_page', arguments: 'hi');
+            },
+          )
+        )
+    );
   }
 }
