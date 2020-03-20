@@ -21,13 +21,23 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       initialRoute: '/home',
-      routes: {
-        'test_page': (context) => WillPopScopeTestRoute(),
-        '/home': (context) => MyHomePage()
-        },
+      // routes: {
+      //   'test_page': (context) => WillPopScopeTestRoute(),
+      //   '/home': (context) => MyHomePage()
+      //   },
       onGenerateRoute: (RouteSettings settings) {
-        print('setttings');
-        
+        return MaterialPageRoute(builder: (context){
+          String routename = settings.name;
+          switch (routename) {
+            case 'test_page':
+            print('object');
+              return WillPopScopeTestRoute();
+            case '/home':
+              return MyHomePage();
+            default:
+              break;
+          }
+        });
       },
     );
   }
